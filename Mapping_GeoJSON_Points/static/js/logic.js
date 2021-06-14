@@ -1,5 +1,5 @@
 // add console.log to check to see if code is working
-//console.log("working");
+console.log("working");
 
 
 
@@ -57,6 +57,9 @@ let dark = L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/{
     accessToken: API_KEY
 });
 
+// add 'graymap' tile layer to the map
+// streets.addTo(map);
+
 // create a base layer that holds both maps
 let baseMaps = {
     Street: streets,
@@ -72,16 +75,15 @@ let map = L.map('mapid', {
         zoom: 2,
         layers: [streets]
     });
-// pass maps layers into the layers control and layers control to the map
+    // pass maps layers into the layers control and layers control to the map
 L.control.layers(baseMaps).addTo(map);
 
 // accessing the airport GeoJson URL
 let airportData = "https://github.com/lmiles77/Mapping_Earthquakes/blob/main/majorAirports.json";
 
 // grabbing GeoJSON data
-d3.json(airportData).then(function(data) {
+d3.json(airportData).then(function(data){
     console.log(data);
     // creating a GeoJSON layer with the retrieved data
-    L.geoJson(data).addTo(map);
+    L.geoJSON(data).addTo(map);
 });
-
