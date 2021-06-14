@@ -15,7 +15,10 @@ let line = [
 
 // Create a polyline using the line coordinates and make the line red.
 L.polyline(line, {
-  color: "blue"
+  color: "blue",
+  dashArray:"10",
+  weight: 4,
+  opacity:0.5
 }).addTo(map);
 
 // Get data from cities.js
