@@ -1,4 +1,4 @@
-// Add console.log to check to see if our code is working.
+// Add console.log to check todd see if our code is working.
 console.log("working");
 
 // We create the tile layer that will be the background of our map.
