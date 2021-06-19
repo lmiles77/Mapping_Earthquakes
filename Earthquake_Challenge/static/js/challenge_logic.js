@@ -62,7 +62,7 @@ L.geoJson(data, {
 // Add Earthquake Layer to map
 earthquakes.addTo(map);
 // Here we create a legend control object.
-var legend = L.control({position: 'bottomright'});
+let legend = L.control({position: 'bottomright'});
 
 // Then add all the details for the legend.
 	legend.onAdd = function() {
@@ -89,9 +89,7 @@ var legend = L.control({position: 'bottomright'});
   // Finally, we our legend to the map.
 legend.addTo(map);
 
-// This function returns the style data for each of the earthquakes we plot on
-// the map. We pass the magnitude of the earthquake into two separate functions
-// to calculate the color and radius.
+// 4. Use the same style as the earthquake data.
 function styleInfo(feature) {
     return {
       opacity: 1,
