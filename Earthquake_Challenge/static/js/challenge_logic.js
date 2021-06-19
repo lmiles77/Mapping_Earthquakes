@@ -85,8 +85,8 @@ let legend = L.control({position: 'bottomright'});
 			magnitudes[i] + (magnitudes[i + 1] ? "&ndash;" + magnitudes[i + 1] + "<br>" : "+");
 		}
 		return div;
-		};
-  // Finally, we our legend to the map.
+	};
+  // Finally, we add our legend to the map.
 legend.addTo(map);
 
 // 4. Use the same style as the earthquake data.
